@@ -218,7 +218,7 @@ runImpulseDE2 <- function(
         
         # Set parallelisation
         if (scaNProc > 1) {
-            register(MulticoreParam(workers = scaNProc))
+            register(SnowParam(workers = scaNProc))
         } else {
             register(SerialParam())
         }
